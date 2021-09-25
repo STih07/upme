@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+tui-root {
+    height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.text-primary {
+  color: var(--tui-primary);
+}
+
+.no-lh {
+  margin: 0;
+}

@@ -1,0 +1,16 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-container {
+  border-radius: 0.5rem;
+  @include shadow(4);
+}
+
+.table-title {
+  border-bottom: 1px solid #DDDFE0;
+}

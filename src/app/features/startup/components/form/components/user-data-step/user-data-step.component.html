@@ -1,0 +1,12 @@
+<form>
+  <tui-input [tuiTextfieldCleaner]="true">Имя</tui-input>
+  <tui-input class="tui-space_top-6" [tuiTextfieldCleaner]="true">Фамилия</tui-input>
+  <tui-input class="tui-space_top-6" [tuiTextfieldCleaner]="true" tuiTextfieldType="email">Почта</tui-input>
+  <tui-input-phone countryCode="+380" [tuiTextfieldCleaner]="true" phoneMaskAfterCountryCode="(##) ###-##-##" class="tui-space_top-6">Номер телефона</tui-input-phone>
+  <tui-input-date class="tui-space_top-6" [tuiTextfieldCleaner]="true">Дата рождения</tui-input-date>
+  <div class="text-center">
+    <button class="tui-space_top-12" tuiButton size="l" (click)="nextStep()">
+      <span class="tui-text_body-m">Дальше</span>
+    </button>
+  </div>
+</form>

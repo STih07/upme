@@ -1,0 +1,56 @@
+<div class="tui-container tui-container_adaptive">
+  <div class="tui-space_top-5">
+    <a tuiLink icon="tuiIconChevronLeft" routerLink=".." iconAlign="left">Вернуться назад</a>
+  </div>
+  <h4 class="tui-text_h4 tui-space_top-5">Набор №11</h4>
+  <div class="table-container">
+    <div class="title table-title">
+      <h6 class="tui-text_h6 tui-space_vertical-5 tui-space_left-5">Кандидаты</h6>
+      <div class="icons">
+        <button tuiIconButton appearance="flat" size="s" icon="tuiIconSearch"></button>
+        <button tuiIconButton class="tui-space_horizontal-6" appearance="flat" size="s" icon="tuiIconFilter"></button>
+      </div>
+    </div>
+    <table class="tui-table">
+      <tbody>
+      <tr class="tui-table__tr">
+        <th class="tui-table__th">
+        </th>
+        <th class="tui-table__th">Имя</th>
+        <th class="tui-table__th">Дата регистрации</th>
+        <th class="tui-table__th">Оценка за письмо</th>
+        <th class="tui-table__th">Собеседование</th>
+        <th class="tui-table__th">Решение</th>
+      </tr>
+      <tr class="tui-table__tr" routerLink="11">
+        <td class="tui-table__th">
+          <tui-checkbox></tui-checkbox>
+        </td>
+        <td class="tui-table__td avatar-td tui-space_vertical-1">
+          <tui-avatar [rounded]="true" class="tui-space_right-4" size="m" avatarUrl="/assets/trash/avatar.jpg"></tui-avatar>
+          <span>Серёжа Тиховский</span>
+        </td>
+        <td class="tui-table__td">26.01.2021</td>
+        <td class="tui-table__td">
+          <tui-badge status="success" value="Хорошо"></tui-badge>
+        </td>
+        <td class="tui-table__td">
+          <tui-badge status="warning" value="Назначено"></tui-badge>
+        </td>
+        <td class="tui-table__td">
+          <tui-badge status="default" value="В ожидании"></tui-badge>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <tui-pagination
+    class="tui-space_top-10"
+    [length]="3"
+    [index]="0"
+  ></tui-pagination>
+
+  <!--  <div class="tui-row tui-row_adaptive">-->
+
+  <!--  </div>-->
+</div>

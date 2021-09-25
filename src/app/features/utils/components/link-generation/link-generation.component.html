@@ -1,0 +1,27 @@
+<div class="tui-container tui-container_adaptive">
+  <div class="tui-col_lg-4">
+    <div class="tui-space_top-8">
+      <a tuiLink icon="tuiIconChevronLeft" routerLink=".." iconAlign="left">Вернуться назад</a>
+    </div>
+    <h4 class="tui-text_h4 tui-space_vertical-6">Генерация ссылок</h4>
+    Создание ссылки для регистрации администратора
+    <tui-checkbox-labeled class="tui-space_vertical-6">
+      Учасник организационной команды
+    </tui-checkbox-labeled>
+    <button tuiButton size="m" appearance="secondary" class="tui-space_top-6" (click)="createLink()">
+      Создать
+    </button>
+    <tui-input-copy
+      class="tui-space_top-8 generation-link"
+      [formControl]="generationLinkCtrl"
+      readOnly="true"
+      tuiTextfieldSize="m"
+    >
+      Ссылка
+    </tui-input-copy>
+  </div>
+
+  <!--  <div class="tui-row tui-row_adaptive">-->
+
+<!--  </div>-->
+</div>

@@ -1,0 +1,17 @@
+.user-section {
+  display: inline-flex;
+  justify-content: center;
+  align-self: start;
+}
+
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notification-title {
+  font-weight: bold;
+  margin: 0;
+}

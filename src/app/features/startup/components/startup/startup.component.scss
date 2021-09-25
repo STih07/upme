@@ -1,0 +1,41 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+
+
+:host {
+    height: 100%;
+}
+
+.background_img {
+    position: absolute;
+    max-width: 25rem;
+    &.left {
+        left: 0;
+    }
+    &.right {
+        right: 0;
+    }
+    &.top {
+        top: 0;
+    }
+    &.bottom {
+        bottom: 0;
+    }
+}
+
+
+.container {
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 12.5rem;
+}
+
+.subtitle {
+    color: var(--tui-text-02);
+    font-weight: bold;
+}

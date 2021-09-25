@@ -1,0 +1,19 @@
+<div class="container">
+    <img class="logo" src="assets/startup/logo.png">
+    <p class="tui-text_h6 tui-space_top-12 tui-space_bottom-4">Укажите свои личные данные</p>
+    <tui-stepper [activeItemIndex]="activeItem" class="tui-space_left-10 tui-space_top-3">
+        <button tuiStep [state]="activeItem > 0 ? 'pass' : 'normal'" disabled></button>
+        <button tuiStep [state]="activeItem > 1 ? 'pass' : 'normal'" disabled></button>
+        <button tuiStep [state]="activeItem > 2 ? 'pass' : 'normal'" disabled></button>
+        <button tuiStep [state]="activeItem > 3 ? 'pass' : 'normal'" disabled></button>
+<!--        <button tuiStep disabled></button>-->
+    </tui-stepper>
+
+    <div [ngSwitch]="activeItem" class="form-container tui-space_top-8">
+      <app-user-data-step *ngSwitchCase="0" (next)="activeItem = 1"></app-user-data-step>
+      <app-password-step *ngSwitchCase="1" (next)="activeItem = 2"></app-password-step>
+      <app-study-step *ngSwitchCase="2" (next)="activeItem = 3"></app-study-step>
+      <app-motivation-step *ngSwitchCase="3" (next)="activeItem = 4"></app-motivation-step>
+      <app-last-step *ngSwitchCase="4"></app-last-step>
+    </div>
+</div>

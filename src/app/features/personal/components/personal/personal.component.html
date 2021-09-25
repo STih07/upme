@@ -1,0 +1,29 @@
+<div class="tui-container tui-container_adaptive tui-space_top-10">
+  <div class="tui-row tui-row_adaptive">
+    <div class="user-section tui-col_lg-4">
+      <tui-avatar [rounded]="true" size="l" avatarUrl="/assets/trash/avatar.jpg"></tui-avatar>
+      <div class="tui-space_left-8 user-info">
+        <div class="tui-text_h6">Серёжа Тиховский</div>
+        <div class="text-primary tui-text-body-m-2">Супер Пупер Разработчик</div>
+      </div>
+    </div>
+    <form class="tui-col_lg-4">
+      <tui-input [tuiTextfieldCleaner]="true">Имя</tui-input>
+      <tui-input class="tui-space_top-6" [tuiTextfieldCleaner]="true">Фамилия</tui-input>
+      <tui-input class="tui-space_top-6" [tuiTextfieldCleaner]="true" tuiTextfieldType="email">Почта</tui-input>
+      <tui-input-date class="tui-space_top-6" [tuiTextfieldCleaner]="true">Дата рождения</tui-input-date>
+      <tui-input-phone countryCode="+380" [tuiTextfieldCleaner]="true" phoneMaskAfterCountryCode="(##) ###-##-##" class="tui-space_top-6">Номер телефона</tui-input-phone>
+      <tui-input-password class="tui-space_top-6" disabled [tuiTextfieldCleaner]="true">Пароль</tui-input-password>
+      <a tuiLink class="tui-space_left-1">Изменить</a>
+    </form>
+    <div class="tui-col_lg-4">
+      <tui-notification>
+        <h6 class="tui-text_body-m notification-title">Приглашение на собеседование</h6>
+        Пожалуйста, выберите время для разговора
+        <div class="tui-space_top-4">
+          <button tuiButton size="s" appearance="outline">Перейти в Calendly</button>
+        </div>
+      </tui-notification>
+    </div>
+  </div>
+</div>

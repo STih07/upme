@@ -1,0 +1,21 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+
+.app-header {
+  height: 80px;
+  @include shadow(1);
+  display: flex;
+  align-items: center;
+
+  .app-logo {
+    cursor: pointer;
+    margin-left: 12rem;
+  }
+}
+
+.left-tabs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin-right: 12rem;
+}
