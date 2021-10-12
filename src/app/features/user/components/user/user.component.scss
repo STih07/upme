@@ -3,3 +3,58 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.main-information {
+  display: flex;
+}
+
+.contacts {
+  margin-bottom: 26px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 19px;
+  margin-top: 8px;
+}
+
+.interview {
+  display: flex;
+}
+
+tui-island {
+  margin-top: 15px;
+}
+
+.date {
+  border: 1px solid var(--tui-link-hover);
+  border-radius: 12px;
+  padding: 10px 24px;
+  display: inline-block;
+
+  span {
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--tui-link);
+  }
+}
+
+a {
+  display: flex;
+}
+
+.btn-decide {
+  margin-bottom: 0.7rem;
+}
+
+.notes {
+  display: flex;
+}
+
+.txt {
+  color: var(--tui-text-02);
+}
+
+.general-information {
+  margin-bottom: 19.2rem;
+}
