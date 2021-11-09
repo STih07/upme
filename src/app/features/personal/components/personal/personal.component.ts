@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecruitmentsService, UserInfoService } from 'src/app/core/api/services';
 
 @Component({
   selector: 'app-personal',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userInfoService: UserInfoService,
+    private recruitments: RecruitmentsService
+  ) { }
 
   ngOnInit(): void {
+    this.recruitments.getAllRecruitmentsUsingGET().subscribe(console.log);
+    // this.userInfoService.getUsersInfoUsingGET().subscribe(console.log);
   }
 
 }

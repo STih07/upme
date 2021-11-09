@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { TuiDialogModule, TuiNotificationsModule, TuiRootModule } from '@taiga-ui/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,8 +25,18 @@ import { CoreModule } from './core/core.module';
     TuiRootModule,
     TuiNotificationsModule,
     TuiDialogModule,
+    NgxsModule.forRoot([], {
+      developmentMode: !environment.production
+    }),
+    NgxsLoggerPluginModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: TokenInterceptor,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

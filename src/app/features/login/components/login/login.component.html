@@ -5,15 +5,15 @@
   <div class="tui-row tui-row_adaptive">
     <div class="tui-col_xl-6 tui-col_lg-6 login-paddings tui-space_top-16 text-center">
       <h2 class="tui-text_h2">Вход в Upme</h2>
-      <form class="tui-space_top-16">
-        <tui-input [tuiTextfieldCleaner]="true">Номер телефона или почта</tui-input>
-        <tui-input class="tui-space_top-6" [tuiTextfieldCleaner]="true">Пароль</tui-input>
+      <form class="tui-space_top-16" [formGroup]="loginForm" (submit)="login()">
+        <tui-input [tuiTextfieldCleaner]="true" formControlName="email">Почта</tui-input>
+        <tui-input-password class="tui-space_top-6" [tuiTextfieldCleaner]="true" formControlName="password">Пароль</tui-input-password>
       </form>
       <div class="links tui-space_top-6">
         <a tuiLink>Зарегистрироваться</a>
         <a tuiLink>Забыли пароль?</a>
       </div>
-      <button tuiButton class="tui-space_top-16">Войти</button>
+      <button tuiButton [disabled]="loginForm.invalid" (click)="login()" class="tui-space_top-16">Войти</button>
     </div>
     <div class="tui-col_xl-6 tui-col_lg-6">
       <img class="login-placeholder-img" src="assets/login/login-placeholder.png">
